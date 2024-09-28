@@ -168,7 +168,7 @@ fig.text(
 
 # add subtitle
 fig.text(
-    0.50, 0.93, f"{file_name} | {selected_position} | {player_team} | Minutes Played: {player_minutes}", size=9,
+    0.50, 0.93, f"{file_name} | {player_team} | {selected_position} | Minutes Played: {player_minutes}", size=9,
     ha="center", weight = 'ultralight',  color="#000000"
 
 
