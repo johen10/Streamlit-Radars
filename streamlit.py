@@ -15,7 +15,7 @@ import matplotlib.pyplot as mpl
 mpl.rcParams['figure.dpi'] = 600
 import os  # <-- Add this line to import the os module
 import matplotlib.patches as patches
-
+import io
 
 # Define the path where CSV files are stored
 xlsx_directory = 'Data“'  # Make sure this directory contains your CSV files
@@ -220,3 +220,10 @@ fig.text(
 )
 # Show the pizza chart in Streamlit
 st.pyplot(fig)
+
+# Create a download button for the JPG image
+st.download_button(
+    label="Download image as JPG",
+    data=img_buffer,
+    file_name="pizza_chart.jpg",
+    mime="image/jpeg")
