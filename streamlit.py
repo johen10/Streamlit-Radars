@@ -221,9 +221,15 @@ fig.text(
 # Show the pizza chart in Streamlit
 st.pyplot(fig)
 
+# Save the figure to a BytesIO buffer in JPG format
+img_buffer = io.BytesIO()
+fig.savefig(img_buffer, format='jpg', bbox_inches='tight')
+img_buffer.seek(0)  # Move the pointer to the start of the buffer
+
 # Create a download button for the JPG image
 st.download_button(
     label="Download image as JPG",
     data=img_buffer,
     file_name="pizza_chart.jpg",
-    mime="image/jpeg")
+    mime="image/jpeg"
+)
