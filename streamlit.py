@@ -23,7 +23,7 @@ xlsx_files = [f for f in os.listdir('Data“') if f.endswith('.xlsx')]
 
 # Streamlit: Create the sidebar for file selection
 st.sidebar.title("Select Data File and Player")
-selected_file = st.sidebar.selectbox("Select XLSX File", xlsx_files)
+selected_file = st.sidebar.selectbox("Select League File", xlsx_files)
 
 # Load the selected CSV file
 data_path = os.path.join('Data“', selected_file)
@@ -32,7 +32,8 @@ data = pd.read_excel(data_path)
 data = data.fillna(0)
 
 # Streamlit app layout
-st.title('Player Comparison with Pizza Charts')
+st.title('Percentile Charts - Wyscout per 90 Data')
+st.subheader('By choosing League, Position, Player and Metrics you'll get a Chart')
 
 
 
@@ -55,8 +56,9 @@ filtered_data = data[(data['Minutes played'] >= min_minutes) & (data['Minutes pl
 
 # Streamlit: Create the sidebar for player and position selection
 if filtered_data.shape[0] > 0:  # Check if there's data after filtering
-    selected_player = st.sidebar.selectbox('Select Player', filtered_data['Player'].unique())
-    selected_position = st.sidebar.selectbox('Select Position', filtered_data['Position'].unique())
+    selected_position = st.sidebar.selectbox('Select Position', filtered_data['Position'].unique(), index = None)
+    selected_player = st.sidebar.selectbox('Select Player', filtered_data['Player'].unique(), index = None)
+    
 
 
 
