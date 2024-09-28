@@ -179,7 +179,7 @@ fig.text(
 
 # add text
 fig.text(
-    0.515, 0.053,"Attacking      Possession      Defending", size=7,  ha="center", weight = 'ultralight',
+    0.515, 0.053,"Attacking         Possession         Defending", size=7,  ha="center", weight = 'ultralight',
      color="#000000"
 )
 
