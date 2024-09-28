@@ -16,17 +16,17 @@ mpl.rcParams['figure.dpi'] = 300
 import os  # <-- Add this line to import the os module
 
 # Define the path where CSV files are stored
-xlsx_directory = ''  # Make sure this directory contains your CSV files
+xlsx_directory = 'Data“'  # Make sure this directory contains your CSV files
 
 # Get a list of CSV files in the directory
-xlsx_files = [f for f in os.listdir('') if f.endswith('.xlsx')]
+xlsx_files = [f for f in os.listdir('Data“') if f.endswith('.xlsx')]
 
 # Streamlit: Create the sidebar for file selection
 st.sidebar.title("Select Data File and Player")
 selected_file = st.sidebar.selectbox("Select XLSX File", xlsx_files)
 
 # Load the selected CSV file
-data_path = os.path.join('', selected_file)
+data_path = os.path.join('Data“', selected_file)
 data = pd.read_excel(data_path)
 
 data = data.fillna(0)
