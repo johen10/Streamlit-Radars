@@ -97,7 +97,7 @@ if len(selected_metrics) > 0:
             # Calculate percentile if there are values to compare
             if len(metric_values) > 0:
                 percentile = percentileofscore(metric_values, player_value, kind='rank')
-                percentile_player_data.append(percentile)
+                percentile_player_data.append(round(percentile))  
             else:
                 # Handle case where no comparison data is available, defaulting to 50th percentile
                 percentile_player_data.append(50)
