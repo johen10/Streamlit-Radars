@@ -183,16 +183,20 @@ fig.text(
 
 # add rectangles
 fig.patches.extend([
-    mpl.Circle(
-        (12,5), 0.015, 0.015, fill=True, color="#DB7093",
+      patches.Circle(
+        (0.372, 0.057), 0.0075, fill=True, color="#DB7093",  # Position and size of the circle
         transform=fig.transFigure, figure=fig
     ),
-    mpl.Rectangle(
-        (0.462, 0.05), 0.015, 0.015, fill=True, color="#4BA543",
+
+    patches.Circle(
+        (0.467, 0.057), 0.0075, fill=True, color="#4BA543",  # Position and size of the circle
+        edgecolor="#000000", linewidth=1.5,
         transform=fig.transFigure, figure=fig
     ),
-    mpl.Rectangle(
-        (0.55, 0.05), 0.015, 0.015, fill=True, color="#2F95F7",
+
+    patches.Circle(
+        (0.565, 0.057), 0.0075, fill=True, color="#2F95F7", # Position and size of the circle
+        edgecolor="black", linewidth=1.5,    
         transform=fig.transFigure, figure=fig
     ),
 ])
