@@ -112,20 +112,20 @@ if len(selected_metrics) > 0:
             slice_colors = []
             for metric in selected_metrics:
                 if metric in attacking_metrics:
-                    slice_colors.append("#DB7093")  # Tomato red for attacking metrics
+                    slice_colors.append("#6DD3CE")  # Tomato red for attacking metrics
                 elif metric in possession_metrics:
-                    slice_colors.append("#4BA543")  # Dodger blue for possession metrics
+                    slice_colors.append("#C8E9A0")  # Dodger blue for possession metrics
                 elif metric in defending_metrics:
-                    slice_colors.append("#2F95F7")  # Lime green for defending metrics
+                    slice_colors.append("#F7A278")  # Lime green for defending metrics
                 elif metric in goalkeeper_metrics:
-                    slice_colors.append("#2F95F7")  # Gold for goalkeeper metrics
+                    slice_colors.append("#ffee93")  # Gold for goalkeeper metrics
 
 
             text_colors = ["#000000"] * len(selected_metrics)
 
 baker = PyPizza(
     params=selected_metrics,                  # list of parameters
-    background_color="#f0f8ff",     # background color
+    background_color="#fff1cf",     # background color
     straight_line_color="#000000",  # color for straight lines
     straight_line_lw=1,             # linewidth for straight lines
     last_circle_color="#000000",    # color for last line
@@ -186,18 +186,24 @@ fig.text(
 # add rectangles
 fig.patches.extend([
       patches.Circle(
-        (0.372, 0.057), 0.0075, fill=True, color="#DB7093",  # Position and size of the circle
+        (0.372, 0.057), 0.0075, fill=True, color="#6DD3CE",  # Position and size of the circle
         transform=fig.transFigure, figure=fig
     ),
 
     patches.Circle(
-        (0.467, 0.057), 0.0075, fill=True, color="#4BA543",  # Position and size of the circle
+        (0.467, 0.057), 0.0075, fill=True, color="#C8E9A0",  # Position and size of the circle
         edgecolor="#000000", linewidth=1.5,
         transform=fig.transFigure, figure=fig
     ),
 
     patches.Circle(
-        (0.565, 0.057), 0.0075, fill=True, color="#2F95F7", # Position and size of the circle
+        (0.565, 0.057), 0.0075, fill=True, color="#F7A278", # Position and size of the circle
+        edgecolor="black", linewidth=1.5,    
+        transform=fig.transFigure, figure=fig
+    ),
+
+    patches.Circle(
+        (0.605, 0.057), 0.0075, fill=True, color="#ffee93", # Position and size of the circle
         edgecolor="black", linewidth=1.5,    
         transform=fig.transFigure, figure=fig
     ),
