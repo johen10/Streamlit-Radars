@@ -183,8 +183,8 @@ fig.text(
 
 # add rectangles
 fig.patches.extend([
-    mpl.Circle(
-        (0.38, 0.05, 5), 0.015, 0.015, fill=True, color="#DB7093",
+    mpl.Rectangle(
+        (0.38, 0.05), 0.015, 0.015, fill=True, color="#DB7093",
         transform=fig.transFigure, figure=fig
     ),
     mpl.Rectangle(
