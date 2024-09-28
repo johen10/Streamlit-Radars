@@ -125,7 +125,7 @@ if len(selected_metrics) > 0:
 
 baker = PyPizza(
     params=selected_metrics,                  # list of parameters
-    background_color="#fff1cf",     # background color
+    background_color="#fef9e7",     # background color
     straight_line_color="#000000",  # color for straight lines
     straight_line_lw=1,             # linewidth for straight lines
     last_circle_color="#000000",    # color for last line
