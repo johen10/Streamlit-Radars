@@ -32,7 +32,7 @@ data = pd.read_excel(data_path)
 data = data.fillna(0)
 
 # Streamlit app layout
-st.title('Percentile Charts - Wyscout per 90 Data')
+st.title('Percentile Charts - Wyscout p/90 Data')
 st.subheader("By choosing League, Position, Player and Metrics you'll get a Chart")
 
 
