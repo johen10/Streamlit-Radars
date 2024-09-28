@@ -31,6 +31,8 @@ data = pd.read_excel(data_path)
 
 data = data.fillna(0)
 
+file_name = os.path.splitext(selected_file)[0]
+
 # Streamlit app layout
 st.title('Percentile Charts - Wyscout p/90 Data')
 st.subheader("By choosing League, Position, Player and Metrics you'll get a Chart")
@@ -166,7 +168,7 @@ fig.text(
 
 # add subtitle
 fig.text(
-    0.50, 0.93, f"{selected_file} | {selected_position} | {player_team} | Minutes Played: {player_minutes}", size=9,
+    0.50, 0.93, f"{file_name} | {selected_position} | {player_team} | Minutes Played: {player_minutes}", size=9,
     ha="center", weight = 'ultralight',  color="#000000"
 
 
