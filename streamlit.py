@@ -16,7 +16,7 @@ mpl.rcParams['figure.dpi'] = 300
 import os  # <-- Add this line to import the os module
 
 # Define the path where CSV files are stored
-xlsx_directory = r'C:/Users/joaoc/Documents/Streamlit/data'  # Make sure this directory contains your CSV files
+xlsx_directory = 'C:/Users/joaoc/Documents/Streamlit/data'  # Make sure this directory contains your CSV files
 
 # Get a list of CSV files in the directory
 xlsx_files = [f for f in os.listdir(xlsx_directory) if f.endswith('.xlsx')]
