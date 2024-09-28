@@ -183,8 +183,8 @@ fig.text(
 
 # add rectangles
 fig.patches.extend([
-    mpl.Rectangle(
-        (0.38, 0.05), 0.015, 0.015, fill=True, color="#DB7093",
+    mpl.Circle(
+        (0.38, 0.05, 5), 0.015, 0.015, fill=True, color="#DB7093",
         transform=fig.transFigure, figure=fig
     ),
     mpl.Rectangle(
@@ -202,7 +202,7 @@ CREDIT_1 = 'João Miguel (@JoaoMiguel063)'
 CREDIT_2 = "Data: Wyscout - all stats p/90"
 CREDIT_3 = "inspired by: @Worville, @FootballSlices, @somazerofc & @Soumyaj15209314"
 fig.text(
-    0.50, 0.02, f"{CREDIT_1} | {CREDIT_2} | {CREDIT_3}", size=4, weight = 'ultralight',
+    0.50, 0.02, f"{CREDIT_1} | {CREDIT_2} | {CREDIT_3}", size=7, weight = 'ultralight',
      color="#000000",
     ha="center"
 )
