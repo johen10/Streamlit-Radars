@@ -14,6 +14,8 @@ from PIL import Image
 import matplotlib.pyplot as mpl
 mpl.rcParams['figure.dpi'] = 600
 import os  # <-- Add this line to import the os module
+import matplotlib.patches as patches
+
 
 # Define the path where CSV files are stored
 xlsx_directory = 'Data“'  # Make sure this directory contains your CSV files
