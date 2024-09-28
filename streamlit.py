@@ -33,7 +33,7 @@ data = data.fillna(0)
 
 # Streamlit app layout
 st.title('Percentile Charts - Wyscout per 90 Data')
-st.subheader('By choosing League, Position, Player and Metrics you'll get a Chart')
+st.subheader("By choosing League, Position, Player and Metrics you'll get a Chart")
 
 
 
