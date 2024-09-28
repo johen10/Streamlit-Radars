@@ -25,7 +25,7 @@ xlsx_files = [f for f in os.listdir('Data“') if f.endswith('.xlsx')]
 
 # Streamlit: Create the sidebar for file selection
 st.sidebar.title("Select Data File and Player")
-selected_file = st.sidebar.selectbox("Select League File", index = None, xlsx_files)
+selected_file = st.sidebar.selectbox("Select League File", xlsx_files)
 
 # Load the selected CSV file
 data_path = os.path.join('Data“', selected_file)
