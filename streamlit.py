@@ -61,7 +61,7 @@ filtered_data = data[(data['Minutes played'] >= min_minutes) & (data['Minutes pl
 # Streamlit: Create the sidebar for player and position selection
 if filtered_data.shape[0] > 0:  # Check if there's data after filtering
     selected_position = st.sidebar.selectbox('Select Position', filtered_data['Position'].unique(), index = None)
-    selected_player = st.sidebar.selectbox('Select Player', filtered_data['Player'].unique(), index = None)
+    selected_player = st.sidebar.selectbox('Select Player', data[data['Position'] == selected_position]['Player'].sort_values().unique())
     
 
 
